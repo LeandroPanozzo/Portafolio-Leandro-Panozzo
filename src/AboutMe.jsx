@@ -1,5 +1,5 @@
 import NavigationBar from './NavigationBar';
-import "./AboutMe.css"; // Archivo CSS para estilos
+import "./AboutMe.css";
 import EG1 from './assets/EG 1.jpg';
 import NB from './assets/Neo_Byte_logo.jpg';
 import AP from './assets/apx_school_logo.jpg';
@@ -8,8 +8,7 @@ import U from './assets/udemy_logo.jpg';
 import I from './assets/informatorio.jpg';
 import UTN from './assets/UTN_logo.jpg';
 import L from './assets/Leandro.jpg';
-import React, { useState, useEffect, useRef } from 'react'; // Add useRef here
-
+import React, { useState, useEffect, useRef } from 'react';
 
 const AboutMe = () => {
   const [activeVideo, setActiveVideo] = useState(null);
@@ -31,27 +30,27 @@ const AboutMe = () => {
   const projects = [
     {
       id: 1,
-      title: "Spa Sentirse Bien Pagina web",
+      title: "Spa Sentirse Bien Página web",
       date: "Jul 2024 - Sep 2024",
-      description: "Creé el sitio web para el Spa Sentirse bien, el cual incluye la gestion de turnos para los clientes, anuncios, consultas, mensajes, creacion de diseño front-end y back-end. El diseño está pensado para reflejar su carácter creativo y profesional, integrando una paleta moderna y una estructura interactiva. Mientras que secciones específicas destacan sus valores clave de confianza, eficiencia y profesionalidad. Además y añadí componentes personalizados, para mejorar la experiencia de usuario y accesibilidad.",
+      description: "Creé el sitio web para el Spa Sentirse Bien, el cual incluye la gestión de turnos para los clientes, anuncios, consultas, mensajes, creación de diseño front-end y back-end. El diseño está pensado para reflejar su carácter creativo y profesional, integrando una paleta moderna y una estructura interactiva. Mientras que secciones específicas destacan sus valores clave de confianza, eficiencia y profesionalidad. Además, añadí componentes personalizados para mejorar la experiencia de usuario y accesibilidad.",
       videoId: "nzA3UBT32F0",
-      technologies: ["React", "Typescript", "CSS", "Rest Framework", "Python", "Django", "PostgreSQL", "Render"]
+      technologies: ["React", "TypeScript", "CSS", "Rest Framework", "Python", "Django", "PostgreSQL", "Render"]
     },
     {
       id: 2,
       title: "Spa Sentirse Bien App",
       date: "Oct 2024 - Nov 2024",
-      description: "Luego de crear el sitio web para Sentise bien, segui con el desarrollo de la aplicacion movil, destinada unicamente a los usuarios en donde podran obtener y gestionar sus turnos, ver los servicios y anuncios del spa",
-      videoId: "2wDRcVgegZo", // Aquí está el ID de tu video
+      description: "Luego de crear el sitio web para Sentirse Bien, seguí con el desarrollo de la aplicación móvil, destinada únicamente a los usuarios en donde podrán obtener y gestionar sus turnos, ver los servicios y anuncios del spa.",
+      videoId: "2wDRcVgegZo",
       technologies: ["React Native", "js", "Expo", "JavaScript", "Expo SDK", "React Native Elements", "Vercel"]
     },
     {
       id: 3,
       title: "Te Estoy Invitando",
       date: "Ene 2025",
-      description: "Te Estoy Invitando es una plataforma web diseñada para facilitar la creación y gestión de invitaciones digitales personalizadas...",
-      videoId: "SLs0Fw2Jbnk", // Aquí está el ID de tu video
-      technologies: ["Next.js", "Typescript", "TailwindCSS", "Shadcn UI", "Zustand", "Supabase", "Vercel"]
+      description: "Te Estoy Invitando es una plataforma web diseñada para facilitar la creación y gestión de invitaciones digitales personalizadas.",
+      videoId: "SLs0Fw2Jbnk",
+      technologies: ["Next.js", "TypeScript", "TailwindCSS", "Shadcn UI", "Zustand", "Supabase", "Vercel"]
     },
     {
       id: 4,
@@ -59,31 +58,29 @@ const AboutMe = () => {
       date: "Jul 2024 - Ene 2025",
       description: "Diario El Gobierno es un medio de comunicación digital que posee como principal objetivo proporcionar información a la esfera pública sobre la coyuntura nacional e internacional.",
       videoId: "YOUR_VIDEO_ID_2",
-      technologies: ["Next.js", "Typescript", "TailwindCSS", "TinyMCE", "React", "Django", "Vercel", "Python", "Rest Framework", "Nodejs"]
-    }
-    ,
+      technologies: ["Next.js", "TypeScript", "TailwindCSS", "TinyMCE", "React", "Django", "Vercel", "Python", "Rest Framework", "Node.js"]
+    },
     {
       id: 5,
-      title: "Blog estilo reddit sobre inteligrencia artificial",
+      title: "Blog estilo Reddit sobre inteligencia artificial",
       date: "Ago 2024 - Oct 2024",
-      description: "Cree un blog sobre inteligencia artificial en donde los usuarios puede postear sus inquietudes, conocimientos y demas. Para ello utilice Spingboot para el backend junto con react y css en el front, la pagina cuenta con barra de busqueda para los post, comentarios estilo reddit utilizando hilos, sistema de moderacion para los post, personalizacion de usuarios",
+      description: "Creé un blog sobre inteligencia artificial en donde los usuarios pueden postear sus inquietudes, conocimientos y demás. Para ello utilicé Spring Boot para el backend junto con React y CSS en el front, la página cuenta con barra de búsqueda para los posts, comentarios estilo Reddit utilizando hilos, sistema de moderación para los posts, personalización de usuarios",
       videoId: "YOUR_VIDEO_ID_2",
-      technologies: ["Python", "Typescript", "CSS", "Django", "HTMl", "PythonAnywhere"]
+      technologies: ["Python", "TypeScript", "CSS", "Django", "HTML", "PythonAnywhere"]
     },
     {
       id: 6,
-      title: "Aplicacion Movil para ver productos de tiendas basada en la ubicacion del usuario",
+      title: "Aplicación Móvil para ver productos de tiendas basada en la ubicación del usuario",
       date: "Dic 2024 - Presente",
-      description: "Aplicacion con Flutter en donde dependiendo de la ubicacion del usuario se mostraran los productos de las tiendas de su ciudad, para eso el usuario y las tiendas creadas deben colocar en un mapa estilo google maps que cree su ubicacion, entonces los usuarios podran ver que productos hay en su zona y tambien buscar los que deseen, tambien se crearon filtros para colocar metodos de pago aceptados por las tiendas, categorias de las mismas, si venden servicios o solo productos, sistema de reservas y promociones",
+      description: "Aplicación con Flutter en donde dependiendo de la ubicación del usuario se mostrarán los productos de las tiendas de su ciudad, para eso el usuario y las tiendas creadas deben colocar en un mapa estilo Google Maps que creé su ubicación, entonces los usuarios podrán ver qué productos hay en su zona y también buscar los que deseen, también se crearon filtros para colocar métodos de pago aceptados por las tiendas, categorías de las mismas, si venden servicios o solo productos, sistema de reservas y promociones",
       videoId: "YOUR_VIDEO_ID_2",
-      technologies:["Python", "Rest Framework", "Flutter", "Django", "Dart", "Android Studio", "Open Street Map"]
+      technologies: ["Python", "Rest Framework", "Flutter", "Django", "Dart", "Android Studio", "Open Street Map"]
     }
   ];
 
   return (
     <div className={`about-me ${darkMode ? 'dark' : ''}`}>
       <div className="content">
-        
         <div className="header-container flex items-center mb-4">
           <div className="title-wrapper">
             <h1 className="title">Hola, soy Leandro</h1>
@@ -97,29 +94,29 @@ const AboutMe = () => {
         <p className="subtitle animate-fade-in animate-delay-1">
           Desarrollador Full Stack especializado en arquitectura y desarrollo de soluciones SaaS
         </p>
-  
+        
         <div className="container animate-fade-in animate-delay-2">
           <div className="text-section">
             <h2 className="section-title">Sobre mí</h2>
             <p className="description">
               Desarrollador y creador de soluciones tecnológicas. Con experiencia en desarrollo web, SaaS y
               aplicaciones innovadoras, me apasiona transformar ideas en productos funcionales y escalables.
-              Trabajo con tecnologías modernas como TypeScript, Next.js, TailwindCSS, SpringBoot, Firebase, entre otras.
+              Trabajo con tecnologías modernas como TypeScript, Next.js, TailwindCSS, Spring Boot, Firebase, entre otras.
               Siempre enfocado en resolver problemas reales con herramientas prácticas. Además de mi experiencia técnica,
               valoro la conexión humana detrás de cada proyecto, asegurándome de comprender las necesidades específicas de
               mis clientes para entregar soluciones que realmente aporten valor.
             </p>
           </div>
         </div>
-  
+
         <div className="experience-section animate-fade-in animate-delay-2">
           <h2 className="section-title">Experiencia Laboral</h2>
-  
+          
           <div className="job-card">
             <div className="job-header">
               <img src={EG1} alt="Diario El Gobierno" className="job-logo" />
               <div>
-                <div><h3 className="job-title">Diario el Gobierno</h3></div>
+                <div><h3 className="job-title">Diario El Gobierno</h3></div>
                 <p className="job-position">Full Stack Developer</p>
                 <p className="job-dates">Junio 2024 - Presente</p>
               </div>
@@ -130,7 +127,7 @@ const AboutMe = () => {
               Integración de servicios y APIs para mejorar el rendimiento y la escalabilidad del sitio.
             </p>
           </div>
-  
+
           <div className="job-card">
             <div className="job-header">
               <img src={NB} alt="Neo Byte Logo" className="job-logo" />
@@ -142,18 +139,18 @@ const AboutMe = () => {
             </div>
             <p className="job-description">
               Neo Byte es una solución de desarrollo web diseñada para emprendedores y artesanos que buscan vender productos en línea. 
-              Ofrezco una plataforma de e-commerce profesional, aplicaciones moviles y de escritorio asequible y optimizada para emprendedores con presupuestos limitados. 
+              Ofrezco una plataforma de e-commerce profesional, aplicaciones móviles y de escritorio asequible y optimizada para emprendedores con presupuestos limitados. 
               La estructura está pensada para satisfacer las necesidades digitales esenciales, ayudando a mis clientes a establecer una 
               presencia en línea con una inversión accesible.
             </p>
           </div>
-  
+
           <div className="job-card">
             <div className="job-header">
               <img src={UTN} alt="Patito Media" className="job-logo" />
               <div>
-                <div><h3 className="job-title">Ayudante de catedra de Probabilidad y Estadistica</h3></div>
-                <p className="job-position">Ayudante de catedra</p>
+                <div><h3 className="job-title">Ayudante de cátedra de Probabilidad y Estadística</h3></div>
+                <p className="job-position">Ayudante de cátedra</p>
                 <p className="job-dates">Mar 2022 - Dic 2024</p>
               </div>
             </div>
@@ -164,15 +161,15 @@ const AboutMe = () => {
             </p>
           </div>
         </div>
-  
+
         <div className="education-section animate-fade-in animate-delay-2">
           <h2 className="section-title">Educación</h2>
           <div className="education-card">
             <img src={UTN} alt="APX School" className="education-logo" />
             <div>
-              <h3 className="education-title">Tecnicatura Universitaria en Programacio de la Universidad Tecnologica Nacional (UTN)</h3>
+              <h3 className="education-title">Tecnicatura Universitaria en Programación de la Universidad Tecnológica Nacional (UTN)</h3>
               <p className="education-dates">2022 - 2024</p>
-              <p className="education-description">Tecnico Universitario en programación</p>
+              <p className="education-description">Técnico Universitario en Programación</p>
             </div>
           </div>
           <div className="education-card">
@@ -180,7 +177,7 @@ const AboutMe = () => {
             <div>
               <h3 className="education-title">Informatorio programa de formación en programación</h3>
               <p className="education-dates">2023 - 2024</p>
-              <p className="education-description">Full Stack Web Developer y Analisis de datos</p>
+              <p className="education-description">Full Stack Web Developer y Análisis de datos</p>
             </div>
           </div>
           <div className="education-card">
