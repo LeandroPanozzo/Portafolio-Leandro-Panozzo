@@ -1,0 +1,743 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.title-wrapper {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2s steps(40, end), blink 0.75s step-end infinite;
+  border-right: 3px solid;
+}
+
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-delay-1 {
+  animation-delay: 0.3s;
+}
+
+.animate-delay-2 {
+  animation-delay: 0.6s;
+}
+
+.about-me {
+  min-height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 40px 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.content {
+  max-width: 900px;
+  width: 100%;
+  border-radius: 16px;
+  padding: 40px;
+  background: transparent;
+  box-sizing: border-box; /* Asegura que el padding no se sume al width */
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #080808;
+  margin-bottom: 30px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.text-section {
+    flex: 1;
+    text-align: left;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #080808;
+    margin-bottom: 15px;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.description {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.experience-section,
+.education-section,
+.skills-section {
+    margin-top: 40px;
+}
+
+.job-card,
+.education-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.job-header,
+.education-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.job-logo,
+.education-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background: #ecf0f1;
+    object-fit: cover;
+}
+
+.job-title,
+.education-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #080808;
+    margin-bottom: 5px;
+}
+
+
+
+.job-dates,
+.education-dates {
+    font-size: 0.9rem;
+    color: #080808;
+    margin: 0;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.skill {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: #3498db;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.skill:hover {
+    background-color: #2980b9;
+}
+/* Previous styles remain unchanged */
+
+.projects-section {
+  margin-top: 80px;
+  text-align: center;
+  padding: 0 20px;
+}
+.projects-tag {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+  font-family: 'Inter', sans-serif;
+}
+.projects-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin: 16px 0;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+.projects-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+  color: #666;
+  max-width: 640px;
+  margin: 0 auto 12px;
+  line-height: 1.6;
+}
+.projects-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.125rem;
+  color: #666;
+  margin-bottom: 48px;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 48px;
+}
+
+@media (min-width: 768px) {
+  .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+  
+.project-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+  .video-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    cursor: pointer;
+    background: #f1f5f9;
+  }
+  
+  .video-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  .video-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .play-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #242b35;
+  }
+  
+  .project-info {
+    padding: 24px;
+  }
+  
+
+  .project-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #080808;
+  }
+  
+  .project-date {
+    font-size: 0.875rem;
+    color: #64748b;
+  }
+  
+  .project-description {
+    color: #64748b;
+    margin-bottom: 16px;
+    line-height: 1.6;
+  }
+  
+  .project-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .technology-tag {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #1e40af;
+    background: #dbeafe;
+    padding: 4px 12px;
+    border-radius: 9999px;
+  }
+  .contact-section {
+  margin-top: 60px;
+  text-align: center;
+  padding: 40px 20px;
+  background: #fff;
+  border-radius: 12px;
+}
+
+.contact-tag {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  margin-bottom: 16px;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 16px;
+}
+
+.contact-description {
+  font-size: 1.1rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.contact-link {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.contact-link:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+/* Dark mode styles for AboutMe page */
+.dark .about-me {
+  background-color: #1a202c;
+  color: #e2e8f0;
+}
+
+.dark .content {
+    background-color: #1a202c;
+}
+
+.dark .title {
+    color: #e2e8f0;
+}
+
+.dark .subtitle {
+    color: #a0aec0;
+}
+
+.dark .section-title {
+    color: #e2e8f0;
+}
+.dark .contact-tag {
+  display: inline-block;
+  background: #ffffff;
+  color: #000000;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  margin-bottom: 16px;
+}
+
+.dark .description {
+    color: #cbd5e0;
+}
+
+.dark .job-card,
+.dark .education-card,
+.dark .project-card {
+    background-color: #2d3748;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dark .job-title,
+.dark .education-title,
+.dark .project-title {
+    color: #e2e8f0;
+}
+
+.dark .job-position,
+.dark .education-description,
+.dark .project-description {
+    color: #a0aec0;
+}
+
+.dark .contact-section {
+    background: #1a202c;
+}
+
+.dark .contact-title {
+    color: #e2e8f0;
+}
+
+.dark .contact-description {
+    color: #a0aec0;
+}
+
+.dark .contact-link {
+    color: #63b3ed;
+}
+.dark .projects-tag {
+  background: #ffffff;
+  color: #000000;
+}
+
+.dark .contact-link:hover {
+    color: #4299e1;
+}
+
+.job-header img {
+  flex-shrink: 0;
+}
+
+.job-header > div {
+  flex: 1;
+  min-width: 0; /* Importante para que el texto se ajuste correctamente */
+}
+
+
+.dark .projects-title {
+  color: #fff;
+}
+
+.dark .projects-subtitle,
+.dark .projects-description {
+  color: #a0aec0;
+}
+
+.dark .project-card {
+  background: #2d3748;
+}
+
+.dark .project-title {
+  color: #e2e8f0;
+}
+
+.dark .project-date,
+.dark .project-description {
+  color: #a0aec0;
+}
+
+.dark .technology-tag {
+  background: #1e40af;
+  color: #dbeafe;
+}
+
+.job-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.job-header {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.job-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+}
+
+.job-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.job-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 8px 0;
+}
+
+.job-position {
+  font-size: 1rem;
+  color: #64748b;
+  margin: 0 0 4px 0;
+}
+
+.job-description {
+  margin-top: 12px;
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+/* Dark mode adjustments */
+.dark .job-card {
+  background-color: #2d3748;
+}
+
+.dark .job-title {
+  color: #e2e8f0;
+}
+
+.dark .job-position {
+  color: #a0aec0;
+}
+
+.dark .job-dates {
+  color: #a0aec0;
+}
+.dark .education-dates{
+  color: #a0aec0;
+}
+
+.dark .job-description {
+  color: #cbd5e0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .job-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .job-logo {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .job-info {
+    width: 100%;
+  }
+}
+/* Ajustes específicos para pantallas más grandes */
+/* Contenedor del encabezado - Aseguramos que siempre sea horizontal */
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 140px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  flex-wrap: nowrap; /* Previene que los elementos se envuelvan */
+}
+
+/* Ajustes para el título */
+.title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #080808;
+  margin-bottom: 0; /* Eliminamos el margen inferior */
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.03em;
+  flex: 1; /* Permite que el título ocupe el espacio disponible */
+}
+
+/* Ajustes para la imagen de perfil */
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0; /* Previene que la imagen se encoja */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 767px) {
+  .header-container {
+    padding: 0 10px;
+    gap: 10px; /* Reducimos el espacio entre elementos en móvil */
+  }
+  
+  .title {
+    font-size: 2rem; /* Reducimos el tamaño de la fuente para que quepa */
+    white-space: normal; /* Permite que el texto se envuelva si es necesario */
+    text-align: left;
+  }
+  .subtitle {
+    font-size: 1.4rem;
+  }
+  
+  .profile-image {
+    width: 110px; /* Hacemos la imagen más pequeña en móvil */
+    height: 110px;
+  }
+}
+
+/* Ajustes para pantallas más grandes */
+@media (min-width: 768px) {
+  .header-container {
+    justify-content: flex-start;
+  }
+  
+  .title {
+    font-size: 3.5rem;
+  }
+  
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+}
+.dark .video-placeholder {
+  background-color: #8096bb;
+}
+@media (max-width: 767px) {
+  .about-me {
+    padding: 20px 0; /* Reduce el padding en móvil */
+    overflow-x: hidden; /* Previene scroll horizontal */
+    width: 100%;
+  }
+
+  .content {
+    padding: 20px;
+    border-radius: 0; /* Elimina el border-radius en móvil */
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Ajusta el grid de proyectos para móvil */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    padding: 0;
+    width: 100%;
+  }
+
+  /* Ajusta las cards para móvil */
+  .project-card,
+  .job-card,
+  .education-card {
+    width: 100%;
+    margin: 0 0 20px 0;
+    border-radius: 8px;
+  }
+
+  /* Ajusta el contenedor de skills para móvil */
+  .skills-container {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  /* Ajusta el contenedor del header para móvil */
+  .header-container {
+    padding: 0;
+    margin: 0 0 20px 0;
+    width: 100%;
+  }
+}
+
+/* Asegura que todo el contenido esté contenido */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+/* Previene que las imágenes se desborden */
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* Asegura que el modo oscuro se aplique a todo el documento */
+html.dark,
+body.dark {
+  background-color: #1a202c;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Asegura que el contenedor principal cubra toda la altura */
+.dark .about-me {
+  background-color: #1a202c;
+  color: #e2e8f0;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.dark .content {
+  background-color: transparent;
+  flex: 1;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+/* Ajustes para móvil */
+@media (max-width: 767px) {
+  .dark .about-me {
+    padding: 20px 0;
+    min-height: 100vh;
+  }
+
+  .dark .content {
+    padding: 20px;
+    border-radius: 0;
+  }
+}
+
+/* Asegura que las secciones internas también mantengan el fondo oscuro */
+.dark .projects-section,
+.dark .experience-section,
+.dark .education-section,
+.dark .skills-section,
+.dark .contact-section {
+  background-color: transparent;
+}
+
+/* Asegura que el footer mantenga el fondo oscuro */
+.dark footer,
+.dark .footer {
+  background-color: #1a202c;
+}
