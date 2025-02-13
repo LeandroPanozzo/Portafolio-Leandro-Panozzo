@@ -64,7 +64,7 @@ const AboutMe = () => {
       id: 5,
       title: "Blog estilo Reddit sobre inteligencia artificial",
       date: "Ago 2024 - Oct 2024",
-      description: "Creé un blog sobre inteligencia artificial en donde los usuarios pueden postear sus inquietudes, conocimientos y demás. Para ello utilicé Spring Boot para el backend junto con React y CSS en el front. La página cuenta con barra de búsqueda para los posts, comentarios estilo Reddit utilizando hilos, sistema de moderación para los posts, personalización de usuarios",
+      description: "Creé un blog sobre inteligencia artificial en donde los usuarios pueden postear sus inquietudes, conocimientos y demás. Para ello utilicé Spring Boot para el backend junto con React y CSS en el front. La página cuenta con barra de búsqueda para los posts, comentarios estilo Reddit utilizando hilos, sistema de moderación para los posts, personalización de usuarios.",
       videoId: "YOUR_VIDEO_ID_2",
       technologies: ["Python", "TypeScript", "CSS", "Django", "HTML", "PythonAnywhere"]
     },
