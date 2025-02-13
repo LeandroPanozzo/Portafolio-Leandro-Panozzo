@@ -40,7 +40,7 @@ const AboutMe = () => {
       id: 2,
       title: "Spa Sentirse Bien App",
       date: "Oct 2024 - Nov 2024",
-      description: "Luego de crear el sitio web para Sentirse Bien, seguí con el desarrollo de la aplicación móvil, destinada únicamente a los usuarios en donde podrán obtener y gestionar sus turnos, ver los servicios y anuncios del spa.",
+      description: "Luego de crear el sitio web para Sentirse Bien, seguí con el desarrollo de la aplicación móvil, destinada únicamente a los usuarios donde podrán obtener y gestionar sus turnos, ver los servicios y anuncios del spa.",
       videoId: "2wDRcVgegZo",
       technologies: ["React Native", "js", "Expo", "JavaScript", "Expo SDK", "React Native Elements", "Vercel"]
     },
@@ -64,7 +64,7 @@ const AboutMe = () => {
       id: 5,
       title: "Blog estilo Reddit sobre inteligencia artificial",
       date: "Ago 2024 - Oct 2024",
-      description: "Creé un blog sobre inteligencia artificial en donde los usuarios pueden postear sus inquietudes, conocimientos y demás. Para ello utilicé Spring Boot para el backend junto con React y CSS en el front, la página cuenta con barra de búsqueda para los posts, comentarios estilo Reddit utilizando hilos, sistema de moderación para los posts, personalización de usuarios",
+      description: "Creé un blog sobre inteligencia artificial en donde los usuarios pueden postear sus inquietudes, conocimientos y demás. Para ello utilicé Spring Boot para el backend junto con React y CSS en el front. La página cuenta con barra de búsqueda para los posts, comentarios estilo Reddit utilizando hilos, sistema de moderación para los posts, personalización de usuarios",
       videoId: "YOUR_VIDEO_ID_2",
       technologies: ["Python", "TypeScript", "CSS", "Django", "HTML", "PythonAnywhere"]
     },
@@ -72,7 +72,7 @@ const AboutMe = () => {
       id: 6,
       title: "Aplicación Móvil para ver productos de tiendas basada en la ubicación del usuario",
       date: "Dic 2024 - Presente",
-      description: "Aplicación con Flutter en donde dependiendo de la ubicación del usuario se mostrarán los productos de las tiendas de su ciudad, para eso el usuario y las tiendas creadas deben colocar en un mapa estilo Google Maps que creé su ubicación, entonces los usuarios podrán ver qué productos hay en su zona y también buscar los que deseen, también se crearon filtros para colocar métodos de pago aceptados por las tiendas, categorías de las mismas, si venden servicios o solo productos, sistema de reservas y promociones",
+      description: "Aplicación con Flutter en donde dependiendo de la ubicación del usuario se mostrarán donde productos de las tiendas de su ciudad. Para eso, el usuario y las tiendas creadas deben colocar en un mapa estilo Google Maps que cree su ubicación, de esa manera los usuarios podrán ver qué productos hay en su zona y también buscar los que deseen. Se crearon filtros para colocar métodos de pago aceptados por las tiendas, categorías de las mismas, si venden servicios o solo productos y un sistema de reservas y promociones.",
       videoId: "YOUR_VIDEO_ID_2",
       technologies: ["Python", "Rest Framework", "Flutter", "Django", "Dart", "Android Studio", "Open Street Map"]
     }
