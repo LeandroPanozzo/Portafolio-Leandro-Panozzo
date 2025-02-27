@@ -21,11 +21,41 @@ const AboutMe = () => {
     document.documentElement.classList.toggle('dark');
   };
   useEffect(() => {
+    // Cargar configuración de Dark Mode
     const savedDarkMode = localStorage.getItem('darkMode') === 'true';
     setDarkMode(savedDarkMode);
     if (savedDarkMode) {
       document.documentElement.classList.add('dark');
     }
+    
+    // Detectar idioma y país del navegador para traducción automática
+    const detectLanguageAndTranslate = () => {
+      try {
+        const userLang = navigator.language || navigator.userLanguage;
+        const countryCode = userLang.split('-')[1]?.toUpperCase();
+        
+        // Si el usuario está en un país de habla inglesa (USA, UK, AUS, etc.)
+        // o el idioma del navegador está en inglés
+        if (countryCode === 'US' || countryCode === 'GB' || countryCode === 'AU' || 
+            userLang.startsWith('en')) {
+          
+          // Esperar a que se cargue el widget de Google Translate
+          setTimeout(() => {
+            // Acceder al selector de idiomas de Google Translate y cambiar a inglés
+            const translateCombo = document.querySelector('.goog-te-combo');
+            if (translateCombo) {
+              translateCombo.value = 'en';
+              translateCombo.dispatchEvent(new Event('change'));
+            }
+          }, 1500);  // Esperar 1.5 segundos para que cargue completamente
+        }
+      } catch (error) {
+        console.error("Error al detectar idioma:", error);
+      }
+    };
+    
+    // Ejecutar después de que el componente se monte
+    detectLanguageAndTranslate();
   }, []);
   const projects = [
     {
@@ -81,6 +111,13 @@ const AboutMe = () => {
   return (
     <div className={`about-me ${darkMode ? 'dark' : ''}`}>
       <div className="content">
+        {/* Componente Google Translate - añadido aquí */}
+        <div 
+          id="google_translate_element" 
+          className="google-translate-widget" 
+          style={{ margin: '10px 0', textAlign: 'right' }}
+        ></div>
+        
         <div className="header-container flex items-center mb-4">
           <div className="title-wrapper">
             <h1 className="title">Hola, soy Leandro</h1>
