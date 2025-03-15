@@ -175,7 +175,7 @@ const AboutMe = () => {
               </div>
             </div>
             <p className="job-description">
-              Neo Byte es una solución de desarrollo web diseñada para emprendedores y artesanos que buscan vender productos en línea. 
+              Lea Tech es una solución de desarrollo web diseñada para emprendedores y artesanos que buscan vender productos en línea. 
               Ofrezco una plataforma de e-commerce profesional, aplicaciones móviles y de escritorio asequible y optimizada para emprendedores con presupuestos limitados. 
               La estructura está pensada para satisfacer las necesidades digitales esenciales, ayudando a mis clientes a establecer una 
               presencia en línea con una inversión accesible.
